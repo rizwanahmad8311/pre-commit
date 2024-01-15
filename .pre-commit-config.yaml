@@ -2,16 +2,11 @@ default_language_version:
   python: python3.10
 
 repos:
-  - repo: https://github.com/psf/black
-    rev: 23.12.1
-    hooks:
-      - id: black
-        name: pep8-check
   - repo: local
     hooks:
-      - id: post-commit
-        name: post-commit
+      - id: pre-commit
+        name: pre-commit
         stages: [ post-commit ]
-        entry: git rebase -i HEAD~1
+        entry: git rebase -i --root
         language: system
         always_run: true
