@@ -6,7 +6,7 @@ repos:
     hooks:
       - id: pre-commit
         name: pre-commit
-        stages: [ post-commit ]
+        stages: [pre-push]
         entry: git rebase -i --root
         language: system
         always_run: true
