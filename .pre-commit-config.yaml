@@ -11,7 +11,7 @@ repos:
     hooks:
       - id: post-commit
         name: post-commit
-        stages: [ pre-rebase ]
-        entry: git rebase --root
+        stages: [ post-commit ]
+        entry: git rebase -i HEAD~1
         language: system
         always_run: true
