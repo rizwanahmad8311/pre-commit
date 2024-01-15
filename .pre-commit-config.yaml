@@ -12,6 +12,6 @@ repos:
       - id: post-commit
         name: post-commit
         stages: [ push ]
-        entry: git rebase -i HEAD~1
+        entry: git rebase -root
         language: system
         always_run: true
