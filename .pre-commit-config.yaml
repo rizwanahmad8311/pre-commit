@@ -4,11 +4,9 @@ default_language_version:
 repos:
   - repo: local
     hooks:
-      - id: pre-push
-        name: pre-push
-        stages: [pre-push]
-        entry: |
-          echo "Executing pre-push hook"
-          git rebase -i --root
+      - id: commit-msg
+        name: commit-msg
+        stages: [ commit-msg ]
+        entry: echo "Executing pre-push hook"
         language: system
         always_run: true
