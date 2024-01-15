@@ -1,12 +1,8 @@
-default_language_version:
-  python: python3.10
-
 repos:
   - repo: local
     hooks:
-      - id: c
-        name: c
-        stages: [ commit-msg ]
-        entry: echo "Executing pre-push hook"
+      - id: commit-msg
+        name: commit-msg
+        entry: echo "Executing commit-msg hook"
         language: system
         always_run: true
